@@ -72,6 +72,14 @@ repositories {
         name = "TOP"
         url = uri("https://maven.k-4u.nl")
     }
+    maven {
+        name = "CurseMaven"
+        url = uri("https://www.cursemaven.com")
+        content {
+            includeGroup("curse.maven")
+        }
+    }
+    mavenLocal()
     mavenCentral()
 }
 
@@ -89,6 +97,8 @@ dependencies {
     runtimeOnly(fg.deobf("mezz.jei:jei-$versionMc-forge:$versionJei"))
     runtimeOnly(fg.deobf("mekanism:Mekanism:1.19.2-10.3.5.474"))
     runtimeOnly(fg.deobf("mekanism:Mekanism:1.19.2-10.3.5.474:generators"))
+
+    runtimeOnly(fg.deobf("curse.maven:ic2-classic-242942:6275736"))
 }
 
 reobf {
